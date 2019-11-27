@@ -1,5 +1,8 @@
-#!/bin/bash -e -x
-cd git/benz-build-source
+#!/bin/bash
+set -eux
+ls -alrt git/
+uname -a
+cd git/beka
 sudo kokoro/setup.sh
-build-debs -L -d rodete
+glinux-build -name="rodete"
 
