@@ -1,8 +1,10 @@
 #!/bin/bash
+#Should be run through go/benz
+
 set -eux
 ls -alrt git/
 uname -a
-cd git/beka
+cd git/benz-build-source
 sudo kokoro/setup.sh
-glinux-build -name="rodete"
+build-debs -b -L -d rodete
 
